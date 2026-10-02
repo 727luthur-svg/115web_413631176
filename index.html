@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人自我介紹 - 我的第一個網頁</title>
+  <style>
+    /* 課表整體樣式美化 (仿淡江選課系統風格) */
+    .schedule-container {
+      font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+    .schedule-info {
+      text-align: center;
+      color: #1a237e;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    .schedule-title {
+      text-align: center;
+      color: #0288d1;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .timetable {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 2px solid #5bb2dc;
+      text-align: center;
+    }
+    .timetable th, .timetable td {
+      border: 1px solid #7bc1e4;
+      padding: 6px 4px;
+      min-width: 90px;
+      height: 48px;
+      vertical-align: middle;
+      font-size: 13px;
+    }
+    .timetable th {
+      background-color: #f7fcff;
+      color: #333333;
+      font-weight: normal;
+    }
+    .timetable .period-col {
+      width: 55px;
+      min-width: 55px;
+      color: #333;
+    }
+    .timetable .header-cell {
+      line-height: 1.4;
+    }
+    /* 課程卡片內容文字樣式 */
+    .course-item {
+      font-size: 12px;
+      line-height: 1.35;
+      text-align: center;
+    }
+    .course-dept {
+      color: #555555;
+      display: block;
+      font-size: 11px;
+    }
+    .course-name {
+      color: #1565c0;
+      text-decoration: underline;
+      display: block;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .course-detail {
+      color: #222222;
+      display: block;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頁首與導覽列 -->
+  <header>
+    <h1>個人自我介紹</h1>
+    <nav>
+      <!-- 本機頁面連結 -->
+      <a href="about.html">關於我</a>
+      
+      <!-- 外部連結 -->
+      <a href="https://www.tku.edu.tw/" target="_blank" rel="noreferrer">淡江大學首頁</a>
+      <a href="https://acad.tku.edu.tw/get_page?t=rtdoc&rtdoc_id=OAA201&lang=tw" target="_blank" rel="noreferrer">淡江大學行事曆</a>
+      <a href="https://github.com/727luthur-svg" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="mailto:727luthur@gmail.com">聯絡信箱</a>
+    </nav>
+  </header>
+
+  <!-- 主要內容區域 -->
+  <main>
+    <!-- 自我介紹區塊 -->
+    <section>
+      <h2>自我介紹</h2>
+      <p>我是一名淡江大學資訊管理系三年級學生，我正在上網路程式設計課程，學習個人化網頁設計與全端開發技術。</p>
+      <!-- 包含正確 alt 的個人圖片 -->
+      <img src="images/profile.jpg" alt="個人照片" width="200">
+    </section>
+
+    <!-- 興趣與技能清單區塊 -->
+    <section>
+      <h2>我的興趣與技能</h2>
+      <ul>
+        <li>閱讀網路小說</li>
+        <li>影像處理</li>
+        <li>學習程式設計 (Java, c++, Python, Web)</li>
+      </ul>
+    </section>
+ <section>
+      <h2>本學期修課課表</h2>
+      <div class="schedule-container">
+        <div class="schedule-info">所系組：資管三Ｃ</div>
+        <div class="schedule-title">課表</div>
+
+        <table class="timetable">
+          <thead>
+            <tr>
+              <th class="period-col header-cell">星<br>期<br>節次</th>
+              <th>一</th>
+              <th>二</th>
+              <th>三</th>
+              <th>四</th>
+              <th>五</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 第一節 -->
+            <tr>
+              <td>一</td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">系統分析與設計</span>
+                  <span class="course-detail">助 教_B 217</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- 第二節 -->
+            <tr>
+              <td>二</td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">系統分析與設計</span>
+                  <span class="course-detail">游佳萍_B 516</span>
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">進階程式設計</span>
+                  <span class="course-detail">助 教_B 217</span>
+                </div>
+              </td>
+            </tr>
+            <!-- 第三節 -->
+            <tr>
+              <td>三</td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">財務管理</span>
+                  <span class="course-detail">鄭元成_B 501</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">系統分析與設計</span>
+                  <span class="course-detail">游佳萍_B 516</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">共同科</span>
+                  <span class="course-name">電商與商業證照輔導</span>
+                  <span class="course-detail">王永才_E 514</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">Web3的應用與實務</span>
+                  <span class="course-detail">李正冬_B 427</span>
+                </div>
+              </td>
+            </tr>
+            <!-- 第四節 -->
+            <tr>
+              <td>四</td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">財務管理</span>
+                  <span class="course-detail">鄭元成_B 501</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">系統分析與設計</span>
+                  <span class="course-detail">游佳萍_B 516</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">共同科</span>
+                  <span class="course-name">電商與商業證照輔導</span>
+                  <span class="course-detail">王永才_E 514</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">Web3的應用與實務</span>
+                  <span class="course-detail">李正冬_B 427</span>
+                </div>
+              </td>
+            </tr>
+            <!-- 第五節 -->
+            <tr>
+              <td>五</td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">網路程式設計</span>
+                  <span class="course-detail">助 教_B 216</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- 第六節 -->
+            <tr>
+              <td>六</td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">共同科</span>
+                  <span class="course-name">工程倫理</span>
+                  <span class="course-detail">姚忠達_E 787</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- 第七節 -->
+            <tr>
+              <td>七</td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">財務管理</span>
+                  <span class="course-detail">鄭元成_B 508</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">共同科</span>
+                  <span class="course-name">工程倫理</span>
+                  <span class="course-detail">姚忠達_E 787</span>
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">共同科</span>
+                  <span class="course-name">管理個案研討</span>
+                  <span class="course-detail">李朝緯_B 503</span>
+                </div>
+              </td>
+            </tr>
+            <!-- 第八節 -->
+            <tr>
+              <td>八</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">歷史文化學門</span>
+                  <span class="course-name">中國歷史與人物</span>
+                  <span class="course-detail">戴月芳_SG 319</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">共同科</span>
+                  <span class="course-name">管理個案研討</span>
+                  <span class="course-detail">李朝緯_B 503</span>
+                </div>
+              </td>
+            </tr>
+            <!-- 第九節 -->
+            <tr>
+              <td>九</td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">網路程式設計</span>
+                  <span class="course-detail">陳有利_L 105</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">進階程式設計</span>
+                  <span class="course-detail">林仁祥_B 218</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">歷史文化學門</span>
+                  <span class="course-name">中國歷史與人物</span>
+                  <span class="course-detail">戴月芳_SG 319</span>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <!-- 第十節 -->
+            <tr>
+              <td>十</td>
+              <td></td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">網路程式設計</span>
+                  <span class="course-detail">陳有利_L 105</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">進階程式設計</span>
+                  <span class="course-detail">林仁祥_B 218</span>
+                </div>
+              </td>
+              <td>
+                <div class="course-item">
+                  <span class="course-dept">資管三</span>
+                  <span class="course-name">網路程式設計</span>
+                  <span class="course-detail">陳有利_B 217</span>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <!-- 第十一至十四節 -->
+            <tr>
+              <td>十一</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>十二</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>十三</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>十四</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    <p>© 2026 潘安世個人網頁. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
