@@ -1,0 +1,269 @@
+/* 全域重設與盒模型 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, "Microsoft JhengHei", "PingFang TC", sans-serif;
+  line-height: 1.8;
+  color: #66829a;
+  background-color: #5157574b;
+}
+
+/* 3. 設定頁首與頁尾的背景色與文字 */
+header,
+footer {
+  background-color: #ca2564;
+  color: #e6e7ec;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+/* 6. 使用 Flexbox 排列導覽列 */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+/* 4. 設定連結樣式與 Hover 效果 */
+nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #f1eded;
+  background-color: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+}
+
+/* 3. 設定主要內容區塊的背景色與版型 */
+main {
+  width: 90%;
+  max-width: 860px;
+  margin: 32px auto;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* 內容區段間距 */
+section {
+  margin-bottom: 36px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+/* 4. 設定標題樣式 */
+h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: #e8373a;
+  font-size: 20px;
+  border-left: 4px solid #3182ce;
+  padding-left: 10px;
+  margin-bottom: 16px;
+}
+
+/* 4. 設定段落與清單文字 */
+p {
+  color: #4a5568;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+ul {
+  padding-left: 20px;
+  color: #4a5568;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* 5. 設定圖片寬度、響應式與圓角 (完全由 CSS 統一控制) */
+.profile-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-top: 14px;
+}
+
+/* 5. 課表美化與框線設定 (淡江風格) */
+.schedule-container {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.schedule-info {
+  text-align: center;
+  color: #1a365d;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.schedule-title {
+  text-align: center;
+  color: #2b6cb0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+}
+
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 2px solid #5bb2dc;
+  text-align: center;
+}
+
+.timetable th,
+.timetable td {
+  border: 1px solid #90cdf4;
+  padding: 8px 4px;
+  min-width: 90px;
+  height: 48px;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.timetable th {
+  background-color: #ebf8ff;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.timetable .period-col {
+  width: 55px;
+  min-width: 55px;
+}
+
+.timetable .header-cell {
+  line-height: 1.4;
+}
+
+.course-item {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.course-dept {
+  color: #718096;
+  display: block;
+  font-size: 11px;
+}
+
+.course-name {
+  color: #2b6cb0;
+  text-decoration: underline;
+  display: block;
+  font-weight: 500;
+}
+
+.course-detail {
+  color: #2d3748;
+  display: block;
+  font-size: 11px;
+}
+
+/* 頁尾樣式 */
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+footer p {
+  color: #cbd5e0;
+  margin: 0;
+}
+
+/* 手機版適應 (RWD 媒體查詢) */
+@media (max-width: 600px) {
+  main {
+    width: 94%;
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+/* 表單樣式 */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+.submit-btn {
+  background-color: #2b6cb0;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background-color: #1a365d;
+}
+}

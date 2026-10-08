@@ -4,82 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>個人自我介紹 - 我的第一個網頁</title>
-  <style>
-    /* 課表整體樣式美化 (仿淡江選課系統風格) */
-    .schedule-container {
-      font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
-      margin: 20px 0;
-      overflow-x: auto;
-    }
-    .schedule-info {
-      text-align: center;
-      color: #1a237e;
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-    .schedule-title {
-      text-align: center;
-      color: #0288d1;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 12px;
-      letter-spacing: 2px;
-    }
-    .timetable {
-      border-collapse: collapse;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #ffffff;
-      border: 2px solid #5bb2dc;
-      text-align: center;
-    }
-    .timetable th, .timetable td {
-      border: 1px solid #7bc1e4;
-      padding: 6px 4px;
-      min-width: 90px;
-      height: 48px;
-      vertical-align: middle;
-      font-size: 13px;
-    }
-    .timetable th {
-      background-color: #f7fcff;
-      color: #333333;
-      font-weight: normal;
-    }
-    .timetable .period-col {
-      width: 55px;
-      min-width: 55px;
-      color: #333;
-    }
-    .timetable .header-cell {
-      line-height: 1.4;
-    }
-    /* 課程卡片內容文字樣式 */
-    .course-item {
-      font-size: 12px;
-      line-height: 1.35;
-      text-align: center;
-    }
-    .course-dept {
-      color: #555555;
-      display: block;
-      font-size: 11px;
-    }
-    .course-name {
-      color: #1565c0;
-      text-decoration: underline;
-      display: block;
-      font-weight: 500;
-      cursor: pointer;
-    }
-    .course-detail {
-      color: #222222;
-      display: block;
-      font-size: 11px;
-    }
-  </style>
+  <!-- 連結外部 CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -103,21 +29,25 @@
     <!-- 自我介紹區塊 -->
     <section>
       <h2>自我介紹</h2>
-      <p>我是一名淡江大學資訊管理系三年級學生，我正在上網路程式設計課程，學習個人化網頁設計與全端開發技術。</p>
-      <!-- 包含正確 alt 的個人圖片 -->
-      <img src="images/profile.jpg" alt="個人照片" width="200">
+      <p>我是一名淡江大學資訊管理系三年級學生，
+        <br>我正在上網路程式設計課程，
+        <br>學習個人化網頁設計與前端開發技術。</p>
+      <!-- 移除 width 內聯屬性，由 CSS class 控制寬度與圓角 -->
+      <img src="images/profile.jpg" alt="穿著白色上衣的個人照片" class="profile-img">
     </section>
 
     <!-- 興趣與技能清單區塊 -->
     <section>
       <h2>我的興趣與技能</h2>
       <ul>
-        <li>閱讀網路小說</li>
-        <li>影像處理</li>
-        <li>學習程式設計 (Java, c++, Python, Web)</li>
+        <li>閱讀網路小說與技術文章</li>
+        <li>影像處理與設計實作</li>
+        <li>學習程式設計 (Java, C++, Python, Web 前端)</li>
       </ul>
     </section>
- <section>
+
+    <!-- 本學期修課課表區塊 -->
+    <section>
       <h2>本學期修課課表</h2>
       <div class="schedule-container">
         <div class="schedule-info">所系組：資管三Ｃ</div>
@@ -138,8 +68,8 @@
             <!-- 第一節 -->
             <tr>
               <td>一</td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">資管三</span>
@@ -147,14 +77,14 @@
                   <span class="course-detail">助 教_B 217</span>
                 </div>
               </td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
             </tr>
             <!-- 第二節 -->
             <tr>
               <td>二</td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">資管三</span>
@@ -162,7 +92,7 @@
                   <span class="course-detail">游佳萍_B 516</span>
                 </div>
               </td>
-              <td></td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">資管三</span>
@@ -174,7 +104,7 @@
             <!-- 第三節 -->
             <tr>
               <td>三</td>
-              <td></td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">資管三</span>
@@ -207,7 +137,7 @@
             <!-- 第四節 -->
             <tr>
               <td>四</td>
-              <td></td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">資管三</span>
@@ -240,7 +170,7 @@
             <!-- 第五節 -->
             <tr>
               <td>五</td>
-              <td></td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">資管三</span>
@@ -248,15 +178,15 @@
                   <span class="course-detail">助 教_B 216</span>
                 </div>
               </td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
             </tr>
             <!-- 第六節 -->
             <tr>
               <td>六</td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">共同科</span>
@@ -264,13 +194,13 @@
                   <span class="course-detail">姚忠達_E 787</span>
                 </div>
               </td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
             </tr>
             <!-- 第七節 -->
             <tr>
               <td>七</td>
-              <td></td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">資管三</span>
@@ -285,7 +215,7 @@
                   <span class="course-detail">姚忠達_E 787</span>
                 </div>
               </td>
-              <td></td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">共同科</span>
@@ -297,9 +227,9 @@
             <!-- 第八節 -->
             <tr>
               <td>八</td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">歷史文化學門</span>
@@ -318,7 +248,7 @@
             <!-- 第九節 -->
             <tr>
               <td>九</td>
-              <td></td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">資管三</span>
@@ -340,12 +270,12 @@
                   <span class="course-detail">戴月芳_SG 319</span>
                 </div>
               </td>
-              <td></td>
+              <td>--無--</td>
             </tr>
             <!-- 第十節 -->
             <tr>
               <td>十</td>
-              <td></td>
+              <td>--無--</td>
               <td>
                 <div class="course-item">
                   <span class="course-dept">資管三</span>
@@ -367,44 +297,82 @@
                   <span class="course-detail">陳有利_B 217</span>
                 </div>
               </td>
-              <td></td>
+              <td>--無--</td>
             </tr>
             <!-- 第十一至十四節 -->
             <tr>
               <td>十一</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
             </tr>
             <tr>
               <td>十二</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
             </tr>
             <tr>
               <td>十三</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
             </tr>
             <tr>
               <td>十四</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
+              <td>--無--</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </section>
+    <!-- 訪客洽詢 / 合作表單區塊 -->
+    <section>
+      <h2>聯絡與合作討論洽詢</h2>
+      <form action="#" method="post" class="contact-form">
+        <!-- 姓名 -->
+        <div class="form-group">
+          <label for="name">訪客姓名：</label>
+          <input type="text" id="name" name="name" placeholder="請輸入姓名" required>
+        </div>
+
+        <!-- 電子信箱 -->
+        <div class="form-group">
+          <label for="email">電子郵件：</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <!-- 日期選擇 (如圖片示範的 type="date") -->
+        <div class="form-group">
+          <label for="date">預計洽詢/會面日期：</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <!-- 數字輸入 (如圖片示範的 type="number") -->
+        <div class="form-group">
+          <label for="duration">預計會面時間（小時）：</label>
+          <input type="number" id="duration" name="duration" min="1" max="8" value="1">
+        </div>
+
+        <!-- 洽詢內容 -->
+        <div class="form-group">
+          <label for="message">洽詢內容與主旨：</label>
+          <textarea id="message" name="message" rows="4" placeholder="請簡述您的需求或建議..."></textarea>
+        </div>
+
+        <!-- 送出按鈕 -->
+        <button type="submit" class="submit-btn">送出表單</button>
+      </form>
     </section>
   </main>
 
